@@ -4,5 +4,5 @@ module.exports = {
   dest: './dist/index.js',
   format: 'umd',
   plugins: [node({jsnext: true})],
-  moduleName: 'smart-table-operators'
+  moduleName: 'smart-table-json-pointer'
 };
