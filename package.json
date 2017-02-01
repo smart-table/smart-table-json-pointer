@@ -1,0 +1,31 @@
+{
+  "name": "smart-table-json-pointer",
+  "version": "0.0.0",
+  "description": "json pointer",
+  "main": "dist/index.js",
+  "jsnext:main": "index.js",
+  "scripts": {
+    "build:test": "rollup -c ./test/rollup.config.js",
+    "build": "rollup -c ./rollup.config.js",
+    "test": "npm run build:test && node ./test/dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smart-table/smart-table-json-pointer.git"
+  },
+  "keywords": [
+    "json",
+    "object"
+  ],
+  "author": "Laurent Renard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smart-table/smart-table-json-pointer/issues"
+  },
+  "homepage": "https://github.com/smart-table/smart-table-json-pointer#readme",
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "zora": "^0.3.0"
+  }
+}
