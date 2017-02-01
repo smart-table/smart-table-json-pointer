@@ -1,6 +1,6 @@
 {
   "name": "smart-table-json-pointer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "json pointer",
   "main": "dist/index.js",
   "jsnext:main": "index.js",
