@@ -1,5 +1,7 @@
 # smart-table-json-pointer
 
+[![CircleCI](https://circleci.com/gh/smart-table/smart-table-json-pointer.svg?style=svg)](https://circleci.com/gh/smart-table/smart-table-json-pointer)
+
 1. Access nested property within an object
 2. Merge sub object with a new object.
 
