@@ -2,7 +2,7 @@ import zora from 'zora';
 import pointer from '../index';
 
 export default zora()
-  .test('pointer get', function * (t) {
+  .test('pointer get', t =>{
     const {get:foo} = pointer('foo');
     t.equal(foo(), undefined);
     t.equal(foo('foo'), undefined);
@@ -16,19 +16,19 @@ export default zora()
     const {get:foobarblah} = pointer('foo.bar.blah');
     t.equal(foobarblah({foo: {bar: {blah: 'hello'}}}), 'hello');
   })
-  .test('pointer set short path', function * (t) {
+  .test('pointer set short path', t =>{
     const {set:foo} = pointer('foo');
     const target = {};
     foo(target, {otherfoo: 'bar'});
     t.deepEqual(target, {foo: {otherfoo: 'bar'}});
   })
-  .test('pointer set long path', function * (t) {
+  .test('pointer set long path', t =>{
     const {set:foobar} = pointer('foo.bar');
     const target = {};
     foobar(target, {blah: 'woot'});
     t.deepEqual({foo: {bar: {blah: 'woot'}}}, target);
   })
-  .test('pointer should blend if there is already a tree', function * (t) {
+  .test('pointer should blend if there is already a tree', t =>{
     const {set:foo} = pointer('foo');
     const target = {foo: {bar: 'woot'}};
     foo(target, {anotherblah: 'wootbis'});

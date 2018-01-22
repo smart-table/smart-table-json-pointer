@@ -1,5 +1,3 @@
-'use strict';
-
 function pointer(path) {
 
 	const parts = path.split('.');
@@ -32,4 +30,4 @@ function pointer(path) {
 	}
 }
 
-module.exports = pointer;
+export default pointer;
