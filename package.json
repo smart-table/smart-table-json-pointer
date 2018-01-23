@@ -1,9 +1,9 @@
 {
   "name": "smart-table-json-pointer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "json pointer",
   "main": "dist/",
-  "module": "dist/index.mjs",
+  "module": "dist/smart-table-json-pointer.es.js",
   "jsnext:main": "index.js",
   "scripts": {
     "build": "rollup -c ./rollup.conf.js",

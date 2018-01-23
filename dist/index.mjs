@@ -1,5 +1,4 @@
 function pointer(path) {
-
 	const parts = path.split('.');
 
 	function partial(obj = {}, parts = []) {
@@ -24,10 +23,10 @@ function pointer(path) {
 
 	return {
 		get(target) {
-			return partial(target, [...parts])
+			return partial(target, [...parts]);
 		},
 		set
-	}
+	};
 }
 
 export default pointer;

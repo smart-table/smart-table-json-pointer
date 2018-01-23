@@ -1,6 +1,3 @@
-var smartTableJsonPointer = (function () {
-'use strict';
-
 function pointer(path) {
 	const parts = path.split('.');
 
@@ -32,7 +29,5 @@ function pointer(path) {
 	};
 }
 
-return pointer;
-
-}());
-//# sourceMappingURL=smart-table-json-pointer.js.map
+export default pointer;
+//# sourceMappingURL=smart-table-json-pointer.es.js.map
