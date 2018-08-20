@@ -4,7 +4,7 @@ export default function pointer(path) {
 	function partial(obj = {}, parts = []) {
 		const p = parts.shift();
 		const current = obj[p];
-		return (current === undefined || parts.length === 0) ?
+		return (current === undefined || current === null || parts.length === 0) ?
 			current : partial(current, parts);
 	}
 

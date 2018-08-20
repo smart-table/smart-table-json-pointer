@@ -13,6 +13,8 @@ export default zora()
     t.equal(foobar('blah'), undefined);
     t.equal(foobar({foo: 'bar'}), undefined);
     t.equal(foobar({foo: {bar: 'woot'}}), 'woot');
+    t.equal(foobar({foo: null}), null);
+    t.equal(foobar({foo: {bar: null}}), null);
     const {get:foobarblah} = pointer('foo.bar.blah');
     t.equal(foobarblah({foo: {bar: {blah: 'hello'}}}), 'hello');
   })
