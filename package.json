@@ -1,13 +1,21 @@
 {
   "name": "smart-table-json-pointer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "json pointer",
-  "main": "dist/",
-  "module": "dist/index.mjs",
-  "jsnext:main": "index.js",
+  "main": "./dist/bundle/index",
+  "module": "./dist/bundle/index.mjs",
+  "typings": "./dist/src/index.ts",
+  "directories": {
+    "test": "test"
+  },
+  "files":["dist"],
   "scripts": {
-    "build": "rollup -c ./rollup.conf.js",
-    "test": "xo index.js && (cat node_modules/zora/dist/zora.js && rollup -f iife -n test ./test/index.js) | node | tap-diff"
+    "test:ci": "npm run build && npm test",
+    "test": "rollup -c ./test/rollup.config.js | node | tap-diff",
+    "build:clean": "rm -rf ./dist && mkdir -p ./dist/bundle && cp -r ./src ./dist/src",
+    "build:compile": "tsc",
+    "build:bundle": "rollup -c ./rollup/build.js && rollup -c ./rollup/cdn.js",
+    "build": "npm run build:clean && npm run build:compile && npm run build:bundle"
   },
   "repository": {
     "type": "git",
@@ -24,10 +32,11 @@
   },
   "homepage": "https://github.com/smart-table/smart-table-json-pointer#readme",
   "devDependencies": {
-    "rollup": "^0.54.1",
-    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup": "^0.66.2",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "tap-diff": "^0.1.1",
-    "xo": "^0.18.2",
-    "zora": "^1.1.6"
+    "typescript": "^3.1.1",
+    "zora": "^2.0.1"
   }
 }
