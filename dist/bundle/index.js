@@ -1,6 +1,8 @@
 'use strict';
 
-function pointer(path) {
+Object.defineProperty(exports, '__esModule', { value: true });
+
+const pointer = (path) => {
     const parts = path.split('.');
     const partial = (obj = {}, parts = []) => {
         const p = parts.shift();
@@ -26,6 +28,6 @@ function pointer(path) {
         },
         set
     };
-}
+};
 
-module.exports = pointer;
+exports.pointer = pointer;

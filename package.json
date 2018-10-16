@@ -1,6 +1,6 @@
 {
   "name": "smart-table-json-pointer",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "json pointer",
   "main": "./dist/bundle/index",
   "module": "./dist/bundle/index.mjs",
@@ -8,7 +8,9 @@
   "directories": {
     "test": "test"
   },
-  "files":["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test:ci": "npm run build && npm test",
     "test": "rollup -c ./test/rollup.config.js | node | tap-diff",

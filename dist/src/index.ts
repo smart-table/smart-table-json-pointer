@@ -1,11 +1,11 @@
-interface JSONPointer {
-    get<T>(target?: T): any;
+export interface JSONPointer<T> {
+    get(target?: T): any;
 
-    set<T>(target: T, newTree: any): T;
+    set(target: T, newTree: any): T;
 }
 
 
-export default function pointer(path: string): JSONPointer {
+export const pointer = <T>(path: string): JSONPointer<T> => {
     const parts = path.split('.');
 
     const partial = (obj = {}, parts: string[] = []) => {
@@ -34,4 +34,4 @@ export default function pointer(path: string): JSONPointer {
         },
         set
     };
-}
+};

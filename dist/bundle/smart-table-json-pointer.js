@@ -1,7 +1,7 @@
-var smartTableSearch = (function () {
+var smartTableSearch = (function (exports) {
     'use strict';
 
-    function pointer(path) {
+    const pointer = (path) => {
         const parts = path.split('.');
         const partial = (obj = {}, parts = []) => {
             const p = parts.shift();
@@ -27,9 +27,11 @@ var smartTableSearch = (function () {
             },
             set
         };
-    }
+    };
 
-    return pointer;
+    exports.pointer = pointer;
 
-}());
+    return exports;
+
+}({}));
 //# sourceMappingURL=smart-table-json-pointer.js.map

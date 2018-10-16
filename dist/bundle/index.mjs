@@ -1,4 +1,4 @@
-function pointer(path) {
+const pointer = (path) => {
     const parts = path.split('.');
     const partial = (obj = {}, parts = []) => {
         const p = parts.shift();
@@ -24,6 +24,6 @@ function pointer(path) {
         },
         set
     };
-}
+};
 
-export default pointer;
+export { pointer };
