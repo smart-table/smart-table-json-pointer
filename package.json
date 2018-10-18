@@ -1,10 +1,10 @@
 {
   "name": "smart-table-json-pointer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "json pointer",
   "main": "./dist/bundle/index",
   "module": "./dist/src/index.js",
-  "typings": "./dist/src/index.ts",
+  "types": "./dist/src/index.d.ts",
   "directories": {
     "test": "test"
   },
