@@ -1,5 +1,5 @@
 import test from 'zora';
-import {pointer} from '../dist/src/index';
+import {pointer} from '../dist/bundle/module';
 
 test('pointer get', t => {
     const {get: foo} = pointer('foo');
