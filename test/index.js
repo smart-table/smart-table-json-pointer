@@ -1,4 +1,4 @@
-import test from 'zora';
+import {test} from 'zora';
 import {pointer} from '../dist/bundle/module';
 
 test('pointer get', t => {
