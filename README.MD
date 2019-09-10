@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/smart-table/smart-table-json-pointer.svg?style=svg)](https://circleci.com/gh/smart-table/smart-table-json-pointer)
 
 1. Access nested property within an object
-2. Merge sub object with a new object.
+2. Merge sub object with a new object (unless the new object is empty and it that case it replaces the old one).
 
 For nodejs and browsers.
 

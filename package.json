@@ -34,11 +34,11 @@
   },
   "homepage": "https://github.com/smart-table/smart-table-json-pointer#readme",
   "devDependencies": {
-    "rollup": "^1.15.6",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup": "^1.21.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "tap-set-exit": "^1.1.1",
-    "typescript": "^3.5.2",
-    "zora": "^3.0.1"
+    "typescript": "^3.6.2",
+    "zora": "^3.0.3"
   }
 }

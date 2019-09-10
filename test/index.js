@@ -35,3 +35,10 @@ test('pointer should blend if there is already a tree', t => {
     foo(target, {anotherblah: 'wootbis'});
     t.deepEqual(target, {foo: {bar: 'woot', anotherblah: 'wootbis'}});
 });
+
+test('pointer should replace existing object if empty object is provided', t => {
+    const {set: foo} = pointer('foo');
+    const target = {foo: {bar: 'woot'}};
+    foo(target, {});
+    t.eq(target, {foo: {}});
+});

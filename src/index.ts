@@ -24,7 +24,9 @@ export const pointer = <T>(path: string): JSONPointer<T> => {
                 current = current[key];
             }
         }
-        current[leaf] = Object.assign(current[leaf] || {}, newTree);
+
+        const isEmptyObject = typeof newTree === 'object' && Object.keys(newTree).length === 0;
+        current[leaf] = isEmptyObject ? {} : Object.assign(current[leaf] || {}, newTree);
         return target;
     };
 
