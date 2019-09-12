@@ -19,14 +19,13 @@ export const pointer = <T>(path: string): JSONPointer<T> => {
         let current = target;
         const [leaf, ...intermediate] = parts.reverse();
         for (const key of intermediate.reverse()) {
-            if (current[key] === undefined) {
+            if (current[key] === void 0) {
                 current[key] = {};
                 current = current[key];
             }
         }
 
-        const isEmptyObject = typeof newTree === 'object' && Object.keys(newTree).length === 0;
-        current[leaf] = isEmptyObject ? {} : Object.assign(current[leaf] || {}, newTree);
+        current[leaf] = newTree;
         return target;
     };
 

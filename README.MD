@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/smart-table/smart-table-json-pointer.svg?style=svg)](https://circleci.com/gh/smart-table/smart-table-json-pointer)
 
 1. Access nested property within an object
-2. Merge sub object with a new object (unless the new object is empty and it that case it replaces the old one).
+2. Replace nested value with a new value
 
 For nodejs and browsers.
 
@@ -34,5 +34,5 @@ const target = {foo:{bar:{woot:{blah:'nut'}}}};
 pointer.set(target,{ni:'bup'});
 
 console.log(target);
-// >  {foo:{bar:{woot:{blah:'nut',ni:'bup'}}}};
+// >  {foo:{bar:{woot:{ni:'bup'}}}};
 ```
